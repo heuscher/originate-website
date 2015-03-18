@@ -1,2 +1,64 @@
 @import 'bourbon';
 @import 'neat';
+@import url(http://fonts.googleapis.com/css?family=Exo+2:400,600,300italic,400italic);
+@import 'mixins';
+
+body {
+    background: url(../images/bg_space.jpg) no-repeat;
+    background-size: cover;
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $exo;
+}
+
+.header,
+.container,
+.footer {
+    margin: 0 15%;
+    max-width: 70%;
+}
+
+.header {
+    margin-top: 50px;
+}
+
+#tagline {
+    @include clearfix;
+    position: absolute;
+    margin-top: -110px;
+    top: 50%;
+    width: 300px;
+
+    h1 {
+        font-size: 14px;
+        font-style: italic;
+        font-weight: 300;
+
+        span {
+            color: $blueLgt;
+            display: block;
+            line-height: .9;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 600;
+            text-transform: uppercase;
+
+            span {
+                color: white;
+            }
+        }
+    }
+
+    h2 {
+        color: white;
+        float: right;
+        font-style: italic;
+        font-weight: 300;
+        margin: 0;
+        width: 60%;
+    }
+}
