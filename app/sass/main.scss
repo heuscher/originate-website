@@ -82,11 +82,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     #star2 {
-        -moz-transform:rotate(25deg);
-        -webkit-transform:rotate(25deg);
-        -ms-transform:rotate(25deg);
-        transform:rotate(25deg);
-        // filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=0.15);
+        @include transform(rotate(25deg));
         -webkit-animation: flickerAnimationAlt 1s infinite;
         -moz-animation: flickerAnimationAlt 1s infinite;
         -o-animation: flickerAnimationAlt 1s infinite;
@@ -96,11 +92,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     #star3 {
-        -moz-transform:rotate(100deg);
-        -webkit-transform:rotate(100deg);
-        -ms-transform:rotate(100deg);
-        transform:rotate(100deg);
-        // filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=0.15);
+        @include transform(rotate(100deg));
         -webkit-animation: flickerAnimation 1.5s infinite;
         -moz-animation: flickerAnimation 1.5s infinite;
         -o-animation: flickerAnimation 1.5s infinite;
