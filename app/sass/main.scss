@@ -63,3 +63,48 @@ h1, h2, h3, h4, h5, h6 {
         text-align: right;
     }
 }
+
+#starmap {
+    position: relative;
+
+    .star {
+        position: absolute;
+    }
+
+    #star1 {
+        -webkit-animation: flickerAnimation 1.25s infinite;
+        -moz-animation: flickerAnimation 1.25s infinite;
+        -o-animation: flickerAnimation 1.25s infinite;
+        animation: flickerAnimation 1.25s infinite;
+        right: -200px;
+        top: -60px;
+    }
+
+    #star2 {
+        -moz-transform:rotate(25deg);
+        -webkit-transform:rotate(25deg);
+        -ms-transform:rotate(25deg);
+        transform:rotate(25deg);
+        // filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=0.15);
+        -webkit-animation: flickerAnimationAlt 1s infinite;
+        -moz-animation: flickerAnimationAlt 1s infinite;
+        -o-animation: flickerAnimationAlt 1s infinite;
+        animation: flickerAnimationAlt 1s infinite;
+        right: 110px;
+        top: 220px;
+    }
+
+    #star3 {
+        -moz-transform:rotate(100deg);
+        -webkit-transform:rotate(100deg);
+        -ms-transform:rotate(100deg);
+        transform:rotate(100deg);
+        // filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=0.15);
+        -webkit-animation: flickerAnimation 1.5s infinite;
+        -moz-animation: flickerAnimation 1.5s infinite;
+        -o-animation: flickerAnimation 1.5s infinite;
+        animation: flickerAnimation 1.5s infinite;
+        right: 300px;
+        top: 170px;
+    }
+}
