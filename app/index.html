@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 </head>
-<body ng-app="originateApp">
+<body ng-app="originateApp" ng-controller="AppCtrl">
 
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -26,7 +26,7 @@
         <a href=""><img src="images/originate_logo.png" height="32px" width="43px"></a>
     </div>
 
-    <div class="container">
+    <div parallax-map class="container">
     <div ng-view=""></div>
     </div>
 
@@ -59,8 +59,8 @@
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers.js"></script>
+    <script src="scripts/directives.js"></script>
     <!-- endbuild -->
 </body>
 </html>
