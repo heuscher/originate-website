@@ -7,65 +7,83 @@ $light: 300;
 $blue: #00fff6;
 $green: #bfffcf;
 
-@keyframes flickerAnimation {
-  0%   { opacity:.65; }
-  50%  { opacity:1; }
-  100% { opacity:.65; }
-}
-@-o-keyframes flickerAnimation {
-  0%   { opacity:.65; }
-  50%  { opacity:1; }
-  100% { opacity:.65; }
-}
-@-moz-keyframes flickerAnimation {
-  0%   { opacity:.65; }
-  50%  { opacity:1; }
-  100% { opacity:.65; }
-}
-@-webkit-keyframes flickerAnimation {
+@include keyframes(flickerAnimation) {
   0%   { opacity:.65; }
   50%  { opacity:1; }
   100% { opacity:.65; }
 }
 
-@keyframes flickerAnimationAlt {
-  0%   { opacity:.75; }
-  50%  { opacity:1; }
-  100% { opacity:.75; }
-}
-@-o-keyframes flickerAnimationAlt {
-  0%   { opacity:.75; }
-  50%  { opacity:1; }
-  100% { opacity:.75; }
-}
-@-moz-keyframes flickerAnimationAlt {
-  0%   { opacity:.75; }
-  50%  { opacity:1; }
-  100% { opacity:.75; }
-}
-@-webkit-keyframes flickerAnimationAlt {
+@include keyframes(flickerAnimationAlt) {
   0%   { opacity:.75; }
   50%  { opacity:1; }
   100% { opacity:.75; }
 }
 
-@keyframes flickerAnimationAlt2 {
+@include keyframes(flickerAnimationAlt2) {
   0%   { opacity:.5; }
   50%  { opacity:1; }
   100% { opacity:.5; }
 }
-@-o-keyframes flickerAnimationAlt2 {
-  0%   { opacity:.5; }
-  50%  { opacity:1; }
-  100% { opacity:.5; }
-}
-@-moz-keyframes flickerAnimationAlt2{
-  0%   { opacity:.5; }
-  50%  { opacity:1; }
-  100% { opacity:.5; }
-}
-@-webkit-keyframes flickerAnimationAlt2 {
-  0%   { opacity:.5; }
-  50%  { opacity:1; }
-  100% { opacity:.5; }
-}
+
+// @keyframes flickerAnimation {
+//   0%   { opacity:.65; }
+//   50%  { opacity:1; }
+//   100% { opacity:.65; }
+// }
+// @-o-keyframes flickerAnimation {
+//   0%   { opacity:.65; }
+//   50%  { opacity:1; }
+//   100% { opacity:.65; }
+// }
+// @-moz-keyframes flickerAnimation {
+//   0%   { opacity:.65; }
+//   50%  { opacity:1; }
+//   100% { opacity:.65; }
+// }
+// @-webkit-keyframes flickerAnimation {
+//   0%   { opacity:.65; }
+//   50%  { opacity:1; }
+//   100% { opacity:.65; }
+// }
+
+// @keyframes flickerAnimationAlt {
+//   0%   { opacity:.75; }
+//   50%  { opacity:1; }
+//   100% { opacity:.75; }
+// }
+// @-o-keyframes flickerAnimationAlt {
+//   0%   { opacity:.75; }
+//   50%  { opacity:1; }
+//   100% { opacity:.75; }
+// }
+// @-moz-keyframes flickerAnimationAlt {
+//   0%   { opacity:.75; }
+//   50%  { opacity:1; }
+//   100% { opacity:.75; }
+// }
+// @-webkit-keyframes flickerAnimationAlt {
+//   0%   { opacity:.75; }
+//   50%  { opacity:1; }
+//   100% { opacity:.75; }
+// }
+
+// @keyframes flickerAnimationAlt2 {
+//   0%   { opacity:.5; }
+//   50%  { opacity:1; }
+//   100% { opacity:.5; }
+// }
+// @-o-keyframes flickerAnimationAlt2 {
+//   0%   { opacity:.5; }
+//   50%  { opacity:1; }
+//   100% { opacity:.5; }
+// }
+// @-moz-keyframes flickerAnimationAlt2{
+//   0%   { opacity:.5; }
+//   50%  { opacity:1; }
+//   100% { opacity:.5; }
+// }
+// @-webkit-keyframes flickerAnimationAlt2 {
+//   0%   { opacity:.5; }
+//   50%  { opacity:1; }
+//   100% { opacity:.5; }
+// }
