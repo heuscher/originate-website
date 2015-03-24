@@ -9,9 +9,9 @@
  */
 
 angular.module('originateApp.controllers', [])
-  .controller('AppCtrl', function ($scope) {
-    console.info('yo');
-  })
+  .controller('AppCtrl', ['$scope', '$window', function ($scope, $window) {
+    $scope.windowWidth = $window.innerWidth;
+  }])
 
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
