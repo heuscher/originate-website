@@ -16,20 +16,20 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'ui.router',
     'originateApp.controllers',
     'originateApp.directives'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+  .config(function ($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/');
+    $stateProvider
+      .state('index', {
+        url: '/',
+        templateUrl: 'views/index.html'
       })
-      .when('/about', {
+      .state('about', {
+        url: '/about',
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
       });
   });
