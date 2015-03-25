@@ -17,8 +17,9 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.router',
-    'originateApp.controllers',
-    'originateApp.directives'
+    'originateApp.services',
+    'originateApp.directives',
+    'originateApp.controllers'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
