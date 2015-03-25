@@ -23,7 +23,7 @@ angular.module('originateApp.directives', [])
             // Temporary variables to hold mouse x-y pos.s
             var tempX = 0;
             var tempY = 0;
-            var objectArray = [];
+            var starfield = [];
 
             // Main function to retrieve mouse x-y pos.s
             function getMouseXY(e) {
@@ -46,34 +46,42 @@ angular.module('originateApp.directives', [])
                 return true;
             }
 
-            function fillObjectArray() {
+            function fillstarfield() {
+                var bgDiv = element[0].querySelector('#starfield-bg');
+                var bgX = 0;
+                var bgY = 0;
+                var bgFactor = 0.25; //parallax shift factor, the bigger the value, the more it shift for parallax movement
+                var bgArray = [];
+                bgArray.push(bgDiv, bgX, bgY, bgFactor);
+                starfield.push(bgArray);
+
                 var introDiv = element[0].querySelector('#intro');
-                var introX = 0; //position div from half width of the page
+                var introX = 0;
                 var introY = (scope.windowHeight / 2) - (angular.element(introDiv)[0].clientHeight / 2);
-                var introFactor = 0.05; //parallax shift factor, the bigger the value, the more it shift for parallax movement
+                var introFactor = 0.05;
                 var introArray = [];
                 introArray.push(introDiv, introX, introY, introFactor);
-                objectArray.push(introArray);
+                starfield.push(introArray);
             }
 
             function positionDivs() {
-                for (var i=0;i<objectArray.length;i++) {
-                    angular.element(objectArray[i][0]).css('left', objectArray[i][1] + 'px');
-                    angular.element(objectArray[i][0]).css('top', objectArray[i][2] + 'px');
+                for (var i=0;i<starfield.length;i++) {
+                    angular.element(starfield[i][0]).css('left', starfield[i][1] + 'px');
+                    angular.element(starfield[i][0]).css('top', starfield[i][2] + 'px');
                 }
             }
 
             $document.on('mousemove', getMouseXY);
 
-            fillObjectArray();
+            fillstarfield();
             positionDivs();
 
             function moveDiv(tempX, tempY) {
-               for (var i=0;i<objectArray.length;i++) {
-                    var yourDivPositionX = objectArray[i][3] * (0.5 * scope.windowWidth - tempX) + objectArray[i][1];
-                    var yourDivPositionY = objectArray[i][3] * (0.5 * scope.windowHeight - tempY) + objectArray[i][2];
-                    angular.element(objectArray[i][0]).css('left', yourDivPositionX + 'px');
-                    angular.element(objectArray[i][0]).css('top', yourDivPositionY + 'px');
+               for (var i=0;i<starfield.length;i++) {
+                    var yourDivPositionX = starfield[i][3] * (0.5 * scope.windowWidth - tempX) + starfield[i][1];
+                    var yourDivPositionY = starfield[i][3] * (0.5 * scope.windowHeight - tempY) + starfield[i][2];
+                    angular.element(starfield[i][0]).css('left', yourDivPositionX + 'px');
+                    angular.element(starfield[i][0]).css('top', yourDivPositionY + 'px');
                 }
             }
 
