@@ -11,6 +11,7 @@
 angular.module('originateApp.controllers', [])
   .controller('AppCtrl', ['$scope', '$window', function ($scope, $window) {
     $scope.windowWidth = $window.innerWidth;
+    $scope.windowHeight = $window.innerHeight;
   }])
 
   .controller('MainCtrl', function ($scope) {
