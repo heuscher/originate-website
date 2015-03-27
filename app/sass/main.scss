@@ -5,8 +5,6 @@
 @import 'mixins';
 
 body {
-    background: url(../images/bg_space.jpg) no-repeat;
-    background-size: cover;
     color: white;
     height: 100%;
     width: 100%;
@@ -28,7 +26,19 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 50px;
 }
 
-#starfield {
+#starBg {
+    background: url(../images/bg_space.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: 120% 140%;
+    background-position: center center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+#main {
     position: relative;
 }
 
