@@ -16,6 +16,7 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
+    'angular-velocity',
     'ui.router',
     'originateApp.services',
     'originateApp.directives',
