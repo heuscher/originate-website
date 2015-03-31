@@ -114,7 +114,6 @@ angular.module('originateApp.directives', [])
         function link(scope, element) {
 
             var introHeight = (scope.windowHeight / 2) - (angular.element(element)[0].clientHeight / 2);
-            console.info(introHeight);
 
             scope.parallaxObj = ParallaxService.get();
             ParallaxService.add(element, 0, introHeight, 0.05);
@@ -167,4 +166,29 @@ angular.module('originateApp.directives', [])
             restrict: 'A',
             link: link
         };
-    }]);
+    }])
+
+    .directive('starlink', function() {
+        function link(scope, element) {
+            var star = element.find('a');
+
+            star.on('mouseover', function() {
+                element.addClass('show');
+            });
+
+            star.on('mouseleave', function() {
+                element.removeClass('show');
+            });
+        }
+
+        return {
+            restrict: 'A',
+            transclude: true,
+            templateUrl: 'views/partials/starlink.html',
+            scope: {
+                page: '@'
+            },
+            replace: true,
+            link: link
+        };
+    });

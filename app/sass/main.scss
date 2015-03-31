@@ -100,69 +100,114 @@ p {
     }
 }
 
-.star {
-    background: url('../images/star_rays.png') no-repeat;
-    background-position: center;
-    background-size: contain;
+.starlink {
     position: absolute;
     top: 50%;
 
-    a {
-        background: url('../images/star_aura.png') no-repeat;
+    .star {
+        background: url('../images/star_rays.png') no-repeat;
         background-position: center;
         background-size: contain;
-        display: block;
+        height: 100%;
         position: absolute;
-        top: 50%;
-        left: 50%;
+        width: 100%;
+        z-index: 998;
+
+        a {
+            background: url('../images/star_aura.png') no-repeat;
+            background-position: center;
+            background-size: contain;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 999;
+        }
     }
 
+    .tag {
+        @include transition(opacity 1s);
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        z-index: 998;
+    }
+
+    &.show {
+        .tag {
+            opacity: 1;
+        }
+    }
 }
 
-#star1 {
-    @include animation(flickerAnimation1 2.5s infinite);
+#star-contact {
     height: 600px;
     width: 600px;
     margin-top: -380px;
     right: -180px;
 
-    a {
-        @include animation(auraAnimation 2.5s infinite);
-        height: 60px;
-        width: 60px;
-        margin: -30px 0 0 -30px;
+    .star {
+        @include animation(flickerAnimation1 2.5s infinite);
+
+        a {
+            @include animation(auraAnimation 2.5s infinite);
+            height: 60px;
+            width: 60px;
+            margin: -30px 0 0 -30px;
+        }
+    }
+
+    .tag {
+        left: 60px;
+        margin-top: -55px;
     }
 }
 
-#star2 {
-    @include transform(rotate(25deg));
-    @include animation(flickerAnimation2 2s infinite);
+#star-services {
     height: 300px;
     width: 300px;
     margin-top: -100px;
     right: 110px;
 
-    a {
-        @include animation(auraAnimation 2s infinite);
-        height: 30px;
-        width: 30px;
-        margin: -15px 0 0 -15px;
+    .star {
+        @include transform(rotate(25deg));
+        @include animation(flickerAnimation2 2s infinite);
+
+        a {
+            @include animation(auraAnimation 2s infinite);
+            height: 30px;
+            width: 30px;
+            margin: -15px 0 0 -15px;
+        }
+    }
+
+    .tag {
+        left: -40px;
     }
 }
 
-#star3 {
-    @include transform(rotate(100deg));
-    @include animation(flickerAnimation3 3s infinite);
+#star-portfolio {
     height: 200px;
     width: 200px;
     margin-top: -140px;
     right: 270px;
 
-    a {
-        @include animation(auraAnimation 3s infinite);
-        height: 20px;
-        width: 20px;
-        margin: -10px 0 0 -10px;
+    .star {
+        @include transform(rotate(100deg));
+        @include animation(flickerAnimation3 3s infinite);
+
+        a {
+            @include animation(auraAnimation 3s infinite);
+            height: 20px;
+            width: 20px;
+            margin: -10px 0 0 -10px;
+        }
+    }
+
+    .tag {
+        margin-top: -44px;
+        left: -74px;
     }
 }
 
@@ -188,3 +233,16 @@ p {
         }
     }
 }
+
+    .st0{fill:#BFFFCF;}
+    .st1{font-size:18;}
+    .st2{fill:none;stroke:#BFFFCF;stroke-miterlimit:10;}
+    .st3{font-family:'Exo2-Bold';}
+
+
+
+
+
+
+
+
