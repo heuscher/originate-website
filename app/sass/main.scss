@@ -4,10 +4,13 @@
 @import url(http://fonts.googleapis.com/css?family=Exo+2:400,700,700italic,400italic,300,300italic);
 @import 'mixins';
 
-body {
-    color: white;
+html, body {
     height: 100%;
     width: 100%;
+}
+
+body {
+    color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,8 +25,9 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
 }
 
-.header {
-    margin-top: 50px;
+#site-head {
+    position: absolute;
+    top: 150px;
 }
 
 #starBg {
@@ -38,14 +42,15 @@ h1, h2, h3, h4, h5, h6 {
     left: 0 !important;
 }
 
+#wrap,
 #main {
+    height: 100%;
     position: relative;
 }
 
 #intro {
     @include clearfix;
     position: absolute;
-    margin-top: -98px;
     top: 50%;
     max-width: 500px;
 
@@ -53,11 +58,14 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 18px;
         font-style: italic;
         font-weight: $light;
+        letter-spacing: 1px;
+        text-transform: capitalize;
         margin: 0;
 
         span {
             color: $green;
             display: block;
+            letter-spacing: normal;
             line-height: .9;
             font-size: 80px;
             font-weight: $bold;
@@ -74,16 +82,25 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 24px;
         font-style: italic;
         font-weight: $light;
+        line-height: 1.5em;
         margin: 0;
         text-align: right;
     }
 }
+
+// #starmap {
+//     position: absolute;
+//     right: 0;
+//     top: 50%;
+// }
+
 
 .star {
     background: url('../images/star_rays.png') no-repeat;
     background-position: center;
     background-size: contain;
     position: absolute;
+    top: 50%;
 
     span {
         background: url('../images/star_aura.png') no-repeat;
@@ -97,16 +114,12 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-#starmap {
-    position: relative;
-}
-
 #star1 {
     @include animation(flickerAnimation1 1.25s infinite);
     height: 600px;
     width: 600px;
-    top: -60px;
-    right: -200px;
+    margin-top: -380px;
+    right: -180px;
 
     span {
         @include animation(auraAnimation 1.25s infinite);
@@ -121,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
     @include animation(flickerAnimation2 1s infinite);
     height: 300px;
     width: 300px;
-    top: 220px;
+    margin-top: -100px;
     right: 110px;
 
     span {
@@ -137,8 +150,8 @@ h1, h2, h3, h4, h5, h6 {
     @include animation(flickerAnimation3 1.5s infinite);
     height: 200px;
     width: 200px;
-    top: 170px;
-    right: 300px;
+    margin-top: -140px;
+    right: 270px;
 
     span {
         @include animation(auraAnimation 1.5s infinite);
