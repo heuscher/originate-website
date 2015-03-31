@@ -120,14 +120,14 @@ p {
 }
 
 #star1 {
-    @include animation(flickerAnimation1 1.25s infinite);
+    @include animation(flickerAnimation1 2.5s infinite);
     height: 600px;
     width: 600px;
     margin-top: -380px;
     right: -180px;
 
     a {
-        @include animation(auraAnimation 1.25s infinite);
+        @include animation(auraAnimation 2.5s infinite);
         height: 60px;
         width: 60px;
         margin: -30px 0 0 -30px;
@@ -136,14 +136,14 @@ p {
 
 #star2 {
     @include transform(rotate(25deg));
-    @include animation(flickerAnimation2 1s infinite);
+    @include animation(flickerAnimation2 2s infinite);
     height: 300px;
     width: 300px;
     margin-top: -100px;
     right: 110px;
 
     a {
-        @include animation(auraAnimation 1s infinite);
+        @include animation(auraAnimation 2s infinite);
         height: 30px;
         width: 30px;
         margin: -15px 0 0 -15px;
@@ -152,14 +152,14 @@ p {
 
 #star3 {
     @include transform(rotate(100deg));
-    @include animation(flickerAnimation3 1.5s infinite);
+    @include animation(flickerAnimation3 3s infinite);
     height: 200px;
     width: 200px;
     margin-top: -140px;
     right: 270px;
 
     a {
-        @include animation(auraAnimation 1.5s infinite);
+        @include animation(auraAnimation 3s infinite);
         height: 20px;
         width: 20px;
         margin: -10px 0 0 -10px;
