@@ -18,7 +18,6 @@ angular.module('originateApp.services', [])
                 angular.element($rootScope.parallaxItems[i][0]).css('left', $rootScope.parallaxItems[i][1] + 'px');
                 angular.element($rootScope.parallaxItems[i][0]).css('top', $rootScope.parallaxItems[i][2] + 'px');
             }
-            console.info($rootScope.parallaxItems);
         };
 
         self.get = function() {

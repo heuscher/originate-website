@@ -6,6 +6,7 @@ $light: 300;
 
 $blue: #00fff6;
 $green: #bfffcf;
+$greenLt: rgba(191, 255, 207, .5);
 
 @include keyframes(flickerAnimation1) {
   0%   { opacity:.55; }

@@ -28,9 +28,16 @@ angular
         url: '/',
         templateUrl: 'views/index.html'
       })
-      .state('about', {
-        url: '/about',
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .state('contact', {
+        url: '/contact',
+        templateUrl: 'views/contact.html',
+      })
+      .state('services', {
+        url: '/services',
+        templateUrl: 'views/services.html',
+      })
+      .state('portfolio', {
+        url: '/portfolio',
+        templateUrl: 'views/portfolio.html',
       });
   });

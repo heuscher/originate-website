@@ -17,6 +17,13 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $exo;
 }
 
+p {
+    font-family: $exo;
+    font-style: italic;
+    font-size: 36px;
+    font-weight: $light;
+}
+
 .header,
 .container,
 .footer {
@@ -28,6 +35,11 @@ h1, h2, h3, h4, h5, h6 {
 #site-head {
     position: absolute;
     top: 150px;
+    z-index: 1000;
+}
+
+#logo {
+    display: block;
 }
 
 #starBg {
@@ -88,13 +100,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-// #starmap {
-//     position: absolute;
-//     right: 0;
-//     top: 50%;
-// }
-
-
 .star {
     background: url('../images/star_rays.png') no-repeat;
     background-position: center;
@@ -102,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     top: 50%;
 
-    span {
+    a {
         background: url('../images/star_aura.png') no-repeat;
         background-position: center;
         background-size: contain;
@@ -121,7 +126,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: -380px;
     right: -180px;
 
-    span {
+    a {
         @include animation(auraAnimation 1.25s infinite);
         height: 60px;
         width: 60px;
@@ -137,7 +142,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: -100px;
     right: 110px;
 
-    span {
+    a {
         @include animation(auraAnimation 1s infinite);
         height: 30px;
         width: 30px;
@@ -153,10 +158,33 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: -140px;
     right: 270px;
 
-    span {
+    a {
         @include animation(auraAnimation 1.5s infinite);
         height: 20px;
         width: 20px;
         margin: -10px 0 0 -10px;
+    }
+}
+
+#subpage {
+    padding-top: 250px;
+
+    h1 {
+        border-bottom: 1px solid $greenLt;
+        color: $green;
+        display: block;
+        letter-spacing: normal;
+        line-height: .9;
+        font-size: 80px;
+        font-weight: $bold;
+        margin-bottom: 35px;
+        padding-bottom: 35px;
+        text-align: center;
+        text-transform: uppercase;
+
+        span {
+            color: $blue;
+            display: block;
+        }
     }
 }
