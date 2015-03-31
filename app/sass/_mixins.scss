@@ -7,83 +7,26 @@ $light: 300;
 $blue: #00fff6;
 $green: #bfffcf;
 
-@include keyframes(flickerAnimation) {
+@include keyframes(flickerAnimation1) {
+  0%   { opacity:.55; }
+  50%  { opacity:1; }
+  100% { opacity:.55; }
+}
+
+@include keyframes(flickerAnimation2) {
   0%   { opacity:.65; }
   50%  { opacity:1; }
   100% { opacity:.65; }
 }
 
-@include keyframes(flickerAnimationAlt) {
-  0%   { opacity:.75; }
-  50%  { opacity:1; }
-  100% { opacity:.75; }
-}
-
-@include keyframes(flickerAnimationAlt2) {
+@include keyframes(flickerAnimation3) {
   0%   { opacity:.5; }
   50%  { opacity:1; }
   100% { opacity:.5; }
 }
 
-// @keyframes flickerAnimation {
-//   0%   { opacity:.65; }
-//   50%  { opacity:1; }
-//   100% { opacity:.65; }
-// }
-// @-o-keyframes flickerAnimation {
-//   0%   { opacity:.65; }
-//   50%  { opacity:1; }
-//   100% { opacity:.65; }
-// }
-// @-moz-keyframes flickerAnimation {
-//   0%   { opacity:.65; }
-//   50%  { opacity:1; }
-//   100% { opacity:.65; }
-// }
-// @-webkit-keyframes flickerAnimation {
-//   0%   { opacity:.65; }
-//   50%  { opacity:1; }
-//   100% { opacity:.65; }
-// }
-
-// @keyframes flickerAnimationAlt {
-//   0%   { opacity:.75; }
-//   50%  { opacity:1; }
-//   100% { opacity:.75; }
-// }
-// @-o-keyframes flickerAnimationAlt {
-//   0%   { opacity:.75; }
-//   50%  { opacity:1; }
-//   100% { opacity:.75; }
-// }
-// @-moz-keyframes flickerAnimationAlt {
-//   0%   { opacity:.75; }
-//   50%  { opacity:1; }
-//   100% { opacity:.75; }
-// }
-// @-webkit-keyframes flickerAnimationAlt {
-//   0%   { opacity:.75; }
-//   50%  { opacity:1; }
-//   100% { opacity:.75; }
-// }
-
-// @keyframes flickerAnimationAlt2 {
-//   0%   { opacity:.5; }
-//   50%  { opacity:1; }
-//   100% { opacity:.5; }
-// }
-// @-o-keyframes flickerAnimationAlt2 {
-//   0%   { opacity:.5; }
-//   50%  { opacity:1; }
-//   100% { opacity:.5; }
-// }
-// @-moz-keyframes flickerAnimationAlt2{
-//   0%   { opacity:.5; }
-//   50%  { opacity:1; }
-//   100% { opacity:.5; }
-// }
-// @-webkit-keyframes flickerAnimationAlt2 {
-//   0%   { opacity:.5; }
-//   50%  { opacity:1; }
-//   100% { opacity:.5; }
-// }
+@include keyframes(auraAnimation) {
+    0%   { transform: scale(.9); }
+    50%  { transform: scale(1); }
+    100% { transform: scale(.9); }
+}

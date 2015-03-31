@@ -79,39 +79,71 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.star {
+    background: url('../images/star_rays.png') no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: absolute;
+
+    span {
+        background: url('../images/star_aura.png') no-repeat;
+        background-position: center;
+        background-size: contain;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+
+}
+
 #starmap {
     position: relative;
+}
 
-    .star {
-        position: absolute;
+#star1 {
+    @include animation(flickerAnimation1 1.25s infinite);
+    height: 600px;
+    width: 600px;
+    top: -60px;
+    right: -200px;
+
+    span {
+        @include animation(auraAnimation 1.25s infinite);
+        height: 60px;
+        width: 60px;
+        margin: -30px 0 0 -30px;
     }
+}
 
-    #star1 {
-        -webkit-animation: flickerAnimation 1.25s infinite;
-        -moz-animation: flickerAnimation 1.25s infinite;
-        -o-animation: flickerAnimation 1.25s infinite;
-        animation: flickerAnimation 1.25s infinite;
-        right: -200px;
-        top: -60px;
+#star2 {
+    @include transform(rotate(25deg));
+    @include animation(flickerAnimation2 1s infinite);
+    height: 300px;
+    width: 300px;
+    top: 220px;
+    right: 110px;
+
+    span {
+        @include animation(auraAnimation 1s infinite);
+        height: 30px;
+        width: 30px;
+        margin: -15px 0 0 -15px;
     }
+}
 
-    #star2 {
-        @include transform(rotate(25deg));
-        -webkit-animation: flickerAnimationAlt 1s infinite;
-        -moz-animation: flickerAnimationAlt 1s infinite;
-        -o-animation: flickerAnimationAlt 1s infinite;
-        animation: flickerAnimationAlt 1s infinite;
-        right: 110px;
-        top: 220px;
-    }
+#star3 {
+    @include transform(rotate(100deg));
+    @include animation(flickerAnimation3 1.5s infinite);
+    height: 200px;
+    width: 200px;
+    top: 170px;
+    right: 300px;
 
-    #star3 {
-        @include transform(rotate(100deg));
-        -webkit-animation: flickerAnimation 1.5s infinite;
-        -moz-animation: flickerAnimation 1.5s infinite;
-        -o-animation: flickerAnimation 1.5s infinite;
-        animation: flickerAnimation 1.5s infinite;
-        right: 300px;
-        top: 170px;
+    span {
+        @include animation(auraAnimation 1.5s infinite);
+        height: 20px;
+        width: 20px;
+        margin: -10px 0 0 -10px;
     }
 }
